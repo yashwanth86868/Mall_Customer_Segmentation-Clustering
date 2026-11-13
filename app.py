@@ -192,7 +192,7 @@ st.set_page_config(
     layout="wide"
 )
 
-API_URL = https://mall-customer-segmentation-clustering.onrender.com
+API_URL = "https://mall-customer-segmentation-clustering.onrender.com"
 
 # ==========================================
 # 2. CUSTOM CSS
