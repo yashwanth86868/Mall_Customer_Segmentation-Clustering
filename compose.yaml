@@ -1,0 +1,8 @@
+
+services:
+  mall-customer-app:
+    build: .
+    container_name: mall-customer-segmentation
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
