@@ -192,7 +192,7 @@ st.set_page_config(
     layout="wide"
 )
 
-API_URL = "http://127.0.0.1:8000"
+API_URL = https://mall-customer-segmentation-clustering.onrender.com
 
 # ==========================================
 # 2. CUSTOM CSS
@@ -237,21 +237,27 @@ st.divider()
 # ==========================================
 # 4. API CONNECTION
 # ==========================================
-
+    
 def check_api():
+    
 
     try:
         response = requests.get(
             f"{API_URL}/",
-            timeout=5
+            timeout=60
         )
 
         response.raise_for_status()
 
         return True
 
-    except requests.exceptions.RequestException:
-        return False
+    except requests.exceptions.RequestException as error:
+
+        st.error(f"API Connection Error: {error}")
+
+    return False
+
+   
 
 if not check_api():
 
